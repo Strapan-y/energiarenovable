@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 200 20% 98%;
+    --foreground: 210 40% 12%;
+
+    --card: 200 25% 97%;
+    --card-foreground: 210 40% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 12%;
+
+    --primary: 199 89% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 160 50% 40%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 200 18% 92%;
+    --muted-foreground: 210 10% 45%;
+
+    --accent: 172 60% 35%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 200 20% 88%;
+    --input: 200 20% 88%;
+    --ring: 199 89% 38%;
+
+    --radius: 0.75rem;
+
+    --chart-wind: 199 89% 38%;
+    --chart-solar: 45 93% 55%;
+    --chart-hydro: 210 70% 50%;
+    --chart-geo: 15 80% 55%;
+    --chart-bio: 130 50% 40%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(199 89% 38%), hsl(172 60% 35%));
+    --gradient-card: linear-gradient(180deg, hsl(200 25% 97%), hsl(200 20% 94%));
+
+    --font-display: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  .text-gradient {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-md border border-border/50 rounded-lg shadow-lg;
+  }
+}
