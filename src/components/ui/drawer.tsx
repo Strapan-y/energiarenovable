@@ -1,10 +1,11 @@
 import * as React from "react";
-import { Drawer as DrawerPrimitive } from "vaul";
+import * as Dialog from "@radix-ui/react-dialog";
+const DrawerPrimitive = Dialog; 
 
 import { cn } from "@/lib/utils";
 
-const Drawer = ({ shouldScaleBackground = true, ...props }: React.ComponentProps<typeof DrawerPrimitive.Root>) => (
-  <DrawerPrimitive.Root shouldScaleBackground={shouldScaleBackground} {...props} />
+const Drawer = (props: React.ComponentProps<typeof DrawerPrimitive.Root>) => (
+  <DrawerPrimitive.Root {...props} />
 );
 Drawer.displayName = "Drawer";
 
